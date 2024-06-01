@@ -3,18 +3,16 @@ package stepDefinition;
 import Pojos.APIResponse;
 import Pojos.Postapidata;
 import Pojos.User;
+import Utils.APIOperations;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.mapper.ObjectMapperDeserializationContext;
-import io.restassured.mapper.ObjectMapperSerializationContext;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-
-import java.io.InputStream;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 
 import static org.junit.Assert.assertEquals;
 
@@ -22,8 +20,12 @@ import static io.restassured.RestAssured.given;
 
 public class StepDefinition {
 
+    RequestSpecification requestSpecification = APIOperations.getRequestSpec();
+
+    ResponseSpecification responseSpecification = APIOperations.getResponseSpec();
     private Response response;
     private String endpoint;
+
 
     @Given("the api endpoint is {string}")
     public void the_api_endpoint_is(String endpoint) {
@@ -31,10 +33,29 @@ public class StepDefinition {
         this.endpoint = endpoint;
     }
 
-    @When("I Place a GET request")
-    public void i_place_a_get_request() {
-        response = given().log().all().when().get(endpoint).then().extract().response();
-        System.out.println(response.getBody().asString());
+    @When("I Place a {string} request")
+    public void i_place_a_request(String method) {
+        RequestSpecification r = given().spec(requestSpecification).log().all();
+
+        if (method.equalsIgnoreCase("GET")) {
+            response = r.when().get(endpoint).then().spec(responseSpecification).extract().response();
+
+        } else if (method.equalsIgnoreCase("PUT")) {
+            response = r.when().put(endpoint).then().spec(responseSpecification).extract().response();
+
+        } else if (method.equalsIgnoreCase("DELETE")) {
+            response = r.when().delete(endpoint).then().spec(responseSpecification).extract().response();
+
+        } else if (method.equalsIgnoreCase("POST")) {
+            Postapidata data = new Postapidata("morpheus", "leader");
+            RequestSpecification re = given().body(data).spec(requestSpecification).log().all();
+            response = re.when().post(endpoint).then().spec(responseSpecification).extract().response();
+            //response = given().log().all().body(data).header("Content-type", "application/json").when().post(endpoint).then().extract().response();
+
+        }
+
+        // response = given().log().all().when().get(endpoint).then().extract().response();
+       // System.out.println(response.getBody().asString());
     }
 
     @Then("Validate the response")
@@ -61,18 +82,17 @@ public class StepDefinition {
         }
     }
 
-    @When("I Place a POST request")
-    public void i_place_a_post_request() {
-        //String body = "{\n" + "    \"name\": \"morpheus\",\n" + "    \"job\": \"leader\"\n" + "}";
-
-        Postapidata data = new Postapidata("morpheus", "leader");
-        response = given().log().all().body(data).header("Content-type", "application/json").when().post(endpoint).then().extract().response();
-
-    }
+//    @When("I Place a POST request")
+//    public void i_place_a_post_request() {
+//        //String body = "{\n" + "    \"name\": \"morpheus\",\n" + "    \"job\": \"leader\"\n" + "}";
+//
+//
+//    }
 
     @Then("Status code should be {int}")
     public void status_code_should_be(int statuscode) {
         assertEquals(statuscode, response.getStatusCode());
+        System.out.println("Statuscode as expected " + response.getStatusCode());
     }
 
 
