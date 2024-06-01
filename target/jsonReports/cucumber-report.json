@@ -1,0 +1,255 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-05-31T11:56:23.794Z",
+        "line": 5,
+        "name": "Place a API request",
+        "description": "",
+        "id": "test-and-validate-api-request;place-a-api-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 836321400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the api endpoint is \"/api/users?page\u003d2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/api/users?page\u003d2\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2446495800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I Place a GET request",
+            "match": {
+              "location": "stepDefinition.StepDefinition.i_place_a_get_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2990700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 463662800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate the response",
+            "match": {
+              "location": "stepDefinition.StepDefinition.validate_the_response()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@MainTest"
+          },
+          {
+            "name": "@Testcase"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-31T11:56:27.638Z",
+        "line": 11,
+        "name": "Place a API request",
+        "description": "",
+        "id": "test-and-validate-api-request;place-a-api-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 999500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the api endpoint is \"/api/users\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/api/users\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 797504600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Place a POST request",
+            "match": {
+              "location": "stepDefinition.StepDefinition.i_place_a_post_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 959800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Status code should be 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@MainTest"
+          },
+          {
+            "name": "@Testtwo"
+          }
+        ]
+      }
+    ],
+    "name": "Test and validate API request",
+    "description": "",
+    "id": "test-and-validate-api-request",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/features/Testone.feature",
+    "tags": [
+      {
+        "name": "@MainTest",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-05-31T11:56:23.794Z",
+        "line": 5,
+        "name": "Place a API request",
+        "description": "",
+        "id": "test-and-validate-api-get-request;place-a-api-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 836321400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the api endpoint is \"/api/users/2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/api/users/2\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2447500000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I Place a GET request",
+            "match": {
+              "location": "stepDefinition.StepDefinition.i_place_a_get_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3987800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Main"
+          },
+          {
+            "name": "@New"
+          }
+        ]
+      }
+    ],
+    "name": "Test and validate API Get request",
+    "description": "",
+    "id": "test-and-validate-api-get-request",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/features/Testtwo.feature",
+    "tags": [
+      {
+        "name": "@Main",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
