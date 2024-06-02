@@ -17,7 +17,8 @@ public class APIOperations {
     }
 
     public  static ResponseSpecification getResponseSpec() {
-       return new ResponseSpecBuilder().build();
+
+        return new ResponseSpecBuilder().build();
     }
 
 

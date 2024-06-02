@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-06-01T13:17:05.138Z",
+        "start_timestamp": "2024-06-02T12:01:16.209Z",
         "line": 5,
         "name": "Place a API request",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1157899700,
+              "duration": 1214750000,
               "status": "passed"
             },
             "line": 6,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 2371654700,
+              "duration": 2365670100,
               "status": "passed"
             },
             "line": 7,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 12965000,
+              "duration": 12965200,
               "status": "passed"
             },
             "line": 8,
@@ -67,7 +67,7 @@
           },
           {
             "result": {
-              "duration": 1143939800,
+              "duration": 588425800,
               "status": "passed"
             },
             "line": 9,
@@ -88,7 +88,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-06-01T13:17:10.173Z",
+        "start_timestamp": "2024-06-02T12:01:20.530Z",
         "line": 13,
         "name": "Place a API request",
         "description": "",
@@ -98,7 +98,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4985000,
+              "duration": 11969500,
               "status": "passed"
             },
             "line": 14,
@@ -116,7 +116,7 @@
           },
           {
             "result": {
-              "duration": 1603709600,
+              "duration": 1189815900,
               "status": "passed"
             },
             "line": 15,
@@ -134,7 +134,6 @@
           },
           {
             "result": {
-              "duration": 997200,
               "status": "passed"
             },
             "line": 16,
@@ -181,17 +180,17 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-06-01T13:17:11.912Z",
+        "start_timestamp": "2024-06-02T12:01:21.796Z",
         "line": 5,
-        "name": "Place a API request",
+        "name": "Place a GET API request",
         "description": "",
-        "id": "test-and-validate-api-get-request;place-a-api-request",
+        "id": "test-and-validate-api-get-request;place-a-get-api-request",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2993700,
+              "duration": 4985800,
               "status": "passed"
             },
             "line": 6,
@@ -209,7 +208,7 @@
           },
           {
             "result": {
-              "duration": 1392990900,
+              "duration": 158576100,
               "status": "passed"
             },
             "line": 7,
@@ -227,7 +226,6 @@
           },
           {
             "result": {
-              "duration": 996500,
               "status": "passed"
             },
             "line": 8,
@@ -242,6 +240,91 @@
               "location": "stepDefinition.StepDefinition.status_code_should_be(int)"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Main"
+          },
+          {
+            "name": "@New"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-06-02T12:01:21.970Z",
+        "line": 11,
+        "name": "Place a GET API request for validating XML Response",
+        "description": "",
+        "id": "test-and-validate-api-get-request;place-a-get-api-request-for-validating-xml-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1994700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the api endpoint is \"https://mocktarget.apigee.net/xml\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://mocktarget.apigee.net/xml\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 433839000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Place a \"GET\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GET\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.i_place_a_request(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 997800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4205745600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Validate the XML Response",
+            "match": {
+              "location": "stepDefinition.StepDefinition.validate_the_xml_response()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [

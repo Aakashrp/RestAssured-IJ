@@ -10,10 +10,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.Assert;
 
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.hasXPath;
 import static org.junit.Assert.assertEquals;
 
 import static io.restassured.RestAssured.given;
@@ -95,5 +101,32 @@ public class StepDefinition {
         System.out.println("Statuscode as expected " + response.getStatusCode());
     }
 
+    @Then("Validate the XML Response")
+    public void validate_the_xml_response() {
+        String resp=response.asString();
+        System.out.println(resp);
+
+        response.then().statusCode(200);
+        response.then().body("root.city",equalTo("San Jose"));
+
+        response.then().body(hasXPath("/root/firstName", equalTo("John")));
+
+        //Validating XML
+        XmlPath xp = response.xmlPath();
+        String name = xp.getString("root.firstName");
+        System.out.println(name);
+
+        String lastName = xp.getString("root.lastName");
+        System.out.println(lastName);
+
+        String city = xp.getString("root.city");
+        System.out.println(city);
+
+        //We can get count no of users
+        List<String> Users=xp.getList("root");
+        Assert.assertEquals(Users.size(),1);
+        System.out.println("Size of List or Users is : " + Users.size());
+
+    }
 
 }
