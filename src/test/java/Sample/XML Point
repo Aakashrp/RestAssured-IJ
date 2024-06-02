@@ -1,0 +1,35 @@
+ String module12Score = xmlPath.getString("studentsList.student.find { it.@ind == '2' }.scores.module12");
+
+ // Validate the XML response using XPath
+        response.then()
+                .body(hasXPath("/studentsList/student[@ind='2']/scores/module12", equalTo("80.2")))
+                .body(hasXPath("/studentsList/student[@ind='2']/firstName", equalTo("Wirt")))
+                .body(hasXPath("/studentsList/student[@ind='2']/lastName", equalTo("Wood")))
+                .body(hasXPath("/studentsList/student[@ind='1']/scores/module1", equalTo("70")))
+                .body(hasXPath("/studentsList/student[@ind='1']/certificate", equalTo("True")));
+
+        List<String> Users=xp.getList("studentsList.student");
+        System.out.println("Size of List or Users is : " + Users.size());
+
+<studentsList>
+    <student id="1">
+        <firstName>Greg</firstName>
+        <lastName>Dean</lastName>
+        <certificate>True</certificate>
+        <scores>
+            <module1>70</module1>
+            <module12>80</module12>
+            <module3>90</module3>
+        </scores>
+    </student>
+    <student ind="2">
+        <firstName>Wirt</firstName>
+        <lastName>Wood</lastName>
+        <certificate>True</certificate>
+        <scores>
+            <module1>80</module1>
+            <module12>80.2</module12>
+            <module3>80</module3>
+        </scores>
+    </student>
+</studentsList>
