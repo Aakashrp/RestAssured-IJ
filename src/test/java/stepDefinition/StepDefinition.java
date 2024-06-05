@@ -6,28 +6,32 @@ import Pojos.User;
 import Utils.APIOperations;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 
+import java.io.File;
 import java.util.List;
 
+import static io.restassured.matcher.RestAssuredMatchers.matchesXsd;
+import static io.restassured.matcher.RestAssuredMatchers.matchesXsdInClasspath;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.hasXPath;
 import static org.junit.Assert.assertEquals;
-
 import static io.restassured.RestAssured.given;
 
 public class StepDefinition {
-
     RequestSpecification requestSpecification = APIOperations.getRequestSpec();
-
     ResponseSpecification responseSpecification = APIOperations.getResponseSpec();
     private Response response;
     private String endpoint;
@@ -45,7 +49,8 @@ public class StepDefinition {
 
         if (method.equalsIgnoreCase("GET")) {
             response = r.when().get(endpoint).then().spec(responseSpecification).extract().response();
-
+            String resp = response.asString();
+            System.out.println(resp);
         } else if (method.equalsIgnoreCase("PUT")) {
             response = r.when().put(endpoint).then().spec(responseSpecification).extract().response();
 
@@ -61,7 +66,7 @@ public class StepDefinition {
         }
 
         // response = given().log().all().when().get(endpoint).then().extract().response();
-       // System.out.println(response.getBody().asString());
+        // System.out.println(response.getBody().asString());
     }
 
     @Then("Validate the response")
@@ -103,11 +108,11 @@ public class StepDefinition {
 
     @Then("Validate the XML Response")
     public void validate_the_xml_response() {
-        String resp=response.asString();
+        String resp = response.asString();
         System.out.println(resp);
 
         response.then().statusCode(200);
-        response.then().body("root.city",equalTo("San Jose"));
+        response.then().body("root.city", equalTo("San Jose"));
 
         response.then().body(hasXPath("/root/firstName", equalTo("John")));
 
@@ -123,10 +128,28 @@ public class StepDefinition {
         System.out.println(city);
 
         //We can get count no of users
-        List<String> Users=xp.getList("root");
-        Assert.assertEquals(Users.size(),1);
+        List<String> Users = xp.getList("root");
+        Assert.assertEquals(Users.size(), 1);
         System.out.println("Size of List or Users is : " + Users.size());
 
     }
 
+
+//    @And("User need to validate XML Schema from XSD file {string}")
+//    public void user_need_to_validate_xml_schema_from_xsd_file(String filepath)  {
+//        filepath = "E:/My Projects/All Projects/API Testing/src/test/resources/schema-definition.xsd";
+//        File xsdfile = new File(filepath);
+//        response.then().assertThat().body(matchesXsd(filepath));
+//        response.then().assertThat().body(RestAssuredMatchers.matchesXsd(filepath));
+//        response.then().assertThat().body(matchesXsdInClasspath("schema-definition.xsd"));
+//    }
+
+
+    @Then("Validate JSON Schema from {string}")
+    public void validate_json_schema_from(String filepath) {
+        filepath = "E:/My Projects/All Projects/API Testing/src/test/resources/FirstGet Schema.json";
+        File schemaFile = new File(filepath);
+        //response.then().assertThat().body(matchesJsonSchemaInClasspath("FirstGet Schema.json"));    //When File is there in resource folder just pass the file name no need of full path it will not take it
+        response.then().assertThat().body(matchesJsonSchema(schemaFile));
+    }
 }
