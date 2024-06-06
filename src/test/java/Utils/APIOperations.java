@@ -2,24 +2,33 @@ package Utils;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-import javax.swing.text.html.HTML;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class APIOperations {
-
 
 
     public static RequestSpecification getRequestSpec() {
         return new RequestSpecBuilder().setBaseUri("https://reqres.in/").addHeader("Content-type", "application/json").build();
     }
 
-    public  static ResponseSpecification getResponseSpec() {
+    public static ResponseSpecification getResponseSpec() {
 
         return new ResponseSpecBuilder().build();
     }
 
-
+    public static String getProperties(String xpath) throws IOException {
+        Properties prop = new Properties();
+        FileInputStream fis = new FileInputStream("E:\\My Projects\\All Projects\\API Testing\\src\\test\\java\\Utils\\Xpath.properties");
+        try {
+            prop.load(fis);
+        } finally {
+            fis.close();
+        }
+        return prop.getProperty(xpath);
+    }
 }

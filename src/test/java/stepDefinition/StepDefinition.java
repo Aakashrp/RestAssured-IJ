@@ -1,34 +1,27 @@
 package stepDefinition;
-
 import Pojos.APIResponse;
 import Pojos.Postapidata;
 import Pojos.User;
 import Utils.APIOperations;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
-
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
-
-import static io.restassured.matcher.RestAssuredMatchers.matchesXsd;
-import static io.restassured.matcher.RestAssuredMatchers.matchesXsdInClasspath;
+import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.hasXPath;
 import static org.junit.Assert.assertEquals;
-import static io.restassured.RestAssured.given;
 
 public class StepDefinition {
     RequestSpecification requestSpecification = APIOperations.getRequestSpec();
@@ -107,7 +100,7 @@ public class StepDefinition {
     }
 
     @Then("Validate the XML Response")
-    public void validate_the_xml_response() {
+    public void validate_the_xml_response() throws IOException {
         String resp = response.asString();
         System.out.println(resp);
 
@@ -115,6 +108,18 @@ public class StepDefinition {
         response.then().body("root.city", equalTo("San Jose"));
 
         response.then().body(hasXPath("/root/firstName", equalTo("John")));
+
+        String xpathFromProperties = APIOperations.getProperties("xpath1");
+        System.out.println("XPath from Properties: " + xpathFromProperties);
+
+
+        if (xpathFromProperties == null || xpathFromProperties.isEmpty()) {
+            throw new IllegalArgumentException("XPath expression from properties is null or empty");
+        }
+
+        //response.then().body(hasXPath(xpathFromProperties), equalTo("John"));    //this will not work
+        response.then().body(hasXPath(APIOperations.getProperties("xpath1") + "[text()='John']")); //working
+        //response.then().body(hasXPath(xpathFromProperties + "[text()='John']"));  //working
 
         //Validating XML
         XmlPath xp = response.xmlPath();
@@ -129,7 +134,7 @@ public class StepDefinition {
 
         //We can get count no of users
         List<String> Users = xp.getList("root");
-        Assert.assertEquals(Users.size(), 1);
+        assertEquals(Users.size(), 1);
         System.out.println("Size of List or Users is : " + Users.size());
 
     }
