@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = "stepDefinition",
        // tags = "@Testcase or @Testtwo or @New",
         plugin={"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports/cucumber.json"},
-        //tags="@MainTest",
+        tags="@TestThree",
         stepNotifications= true
         // dryRun = true
 )

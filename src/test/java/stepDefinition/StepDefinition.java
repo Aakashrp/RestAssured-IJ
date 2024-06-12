@@ -119,6 +119,7 @@ public class StepDefinition {
 
         //response.then().body(hasXPath(xpathFromProperties), equalTo("John"));    //this will not work
         response.then().body(hasXPath(APIOperations.getProperties("xpath1") + "[text()='John']")); //working
+        response.then().body(hasXPath(APIOperations.getProperties("xpath2") + "[text()='San Jose']"));
         //response.then().body(hasXPath(xpathFromProperties + "[text()='John']"));  //working
 
         //Validating XML

@@ -13,7 +13,7 @@ public class APIOperations {
 
 
     public static RequestSpecification getRequestSpec() {
-        return new RequestSpecBuilder().setBaseUri("https://reqres.in/").addHeader("Content-type", "application/json").build();
+        return new RequestSpecBuilder().setBaseUri("https://reqres.in/").addHeader("Content-type", "application/json").setContentType("text/xml; charset=utf-8").build();
     }
 
     public static ResponseSpecification getResponseSpec() {
