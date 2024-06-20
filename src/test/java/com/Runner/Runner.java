@@ -10,10 +10,6 @@ import org.junit.runner.RunWith;
         features = "E:\\My Projects\\All Projects\\API Testing\\src\\main\\resources\\features",
         glue = "stepDefinition",
        // tags = "@Testcase or @Testtwo or @New",
-        plugin={"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports/cucumber.json"},
-       // tags="@TestThree",
-        stepNotifications= true
-        // dryRun = true
 )
 
 public class Runner {
