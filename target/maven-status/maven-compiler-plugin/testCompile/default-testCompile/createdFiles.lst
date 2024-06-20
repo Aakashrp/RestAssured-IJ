@@ -1,9 +1,0 @@
-Utils\APIOperations.class
-Pojos\Support.class
-com\Runner\Runner.class
-stepDefinition\StepDefinitions.class
-Sample\Main.class
-Pojos\APIResponse.class
-Pojos\Postapidata.class
-stepDefinition\StepDefinition.class
-Pojos\User.class

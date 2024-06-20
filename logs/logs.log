@@ -1,0 +1,285 @@
+[INFO ] 2024-06-19 18:19:31.842 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:19:33.954 [main] StepDefinition - Status code as expected200
+[DEBUG] 2024-06-19 18:19:34.864 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:19:34.890 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:19:35.558 [main] StepDefinition - Status code as expected201
+[INFO ] 2024-06-19 18:19:36.842 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:19:36.962 [main] StepDefinition - Status code as expected200
+[INFO ] 2024-06-19 18:19:36.973 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:19:37.426 [main] StepDefinition - Status code as expected200
+[INFO ] 2024-06-19 18:28:58.925 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:29:01.621 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:29:02.446 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:29:02.468 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:29:03.118 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:29:04.313 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:29:04.452 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:29:04.464 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:29:04.959 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:30:34.654 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:30:38.092 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:30:38.970 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:30:38.992 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:30:39.733 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:30:41.087 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:30:41.270 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:30:41.280 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:30:41.766 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:35:52.351 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:35:54.338 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:35:55.372 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:35:55.402 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:35:56.255 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:35:57.283 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:35:57.417 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:35:57.435 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:35:57.899 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:36:52.006 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:36:54.124 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:36:55.254 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:36:55.285 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:36:56.141 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:36:57.885 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:36:58.001 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:36:58.020 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:36:58.535 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:37:13.893 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:37:16.007 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:37:16.688 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:37:16.711 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:37:17.340 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:37:18.427 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:37:18.582 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:37:18.594 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:37:19.070 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:39:23.542 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:39:27.483 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:39:28.304 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:39:28.326 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:39:29.074 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:39:30.110 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:39:30.237 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:39:30.251 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:39:30.720 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:40:47.253 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:40:50.373 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:40:51.211 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:40:51.233 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:40:51.862 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:40:52.925 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:40:53.128 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:40:53.146 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:40:53.637 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:42:22.587 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:42:24.680 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:42:25.534 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:42:25.561 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:42:26.240 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:42:27.332 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:42:27.491 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:42:27.502 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:42:28.091 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:42:56.751 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:42:58.663 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:42:59.514 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:42:59.546 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:43:00.389 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:43:01.402 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:43:01.541 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:43:01.557 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:43:02.089 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:44:48.918 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:44:51.030 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:44:51.734 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:44:51.757 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:44:52.472 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:44:53.599 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:44:53.769 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:44:53.793 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:44:54.331 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:53:25.776 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-19 18:53:27.977 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-19 18:53:28.741 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-19 18:53:28.771 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-19 18:53:29.451 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-19 18:53:30.651 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-19 18:53:30.791 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-19 18:53:30.807 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-19 18:53:31.324 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:06:03.726 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:06:08.552 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:06:10.259 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:06:10.287 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:06:11.494 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-20 01:06:13.486 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:06:14.152 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:06:14.168 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:06:14.698 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:08:15.076 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:08:18.433 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:08:19.845 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:08:19.888 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:08:20.806 [main] StepDefinition - Status code as expected : 201
+[INFO ] 2024-06-20 01:08:22.374 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:08:22.650 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:08:22.682 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:08:23.166 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:10:20.033 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:10:22.600 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:10:23.454 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:10:23.478 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:10:24.211 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:10:24.214 [main] StepDefinition - Status code as expected:188
+[INFO ] 2024-06-20 01:10:25.530 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:10:25.698 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:10:25.711 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:10:26.161 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:18:20.354 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:18:22.629 [main] StepDefinition - Scenario nameio.cucumber.java.Scenario
+[INFO ] 2024-06-20 01:18:22.640 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:18:23.600 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:18:23.627 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:18:24.350 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:18:24.355 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:18:25.841 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:18:26.016 [main] StepDefinition - Scenario nameio.cucumber.java.Scenario
+[INFO ] 2024-06-20 01:18:26.018 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:18:26.033 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:18:26.516 [main] StepDefinition - Scenario nameio.cucumber.java.Scenario
+[INFO ] 2024-06-20 01:18:26.521 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:21:18.466 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:21:21.618 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:21:22.608 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:21:22.612 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:21:23.845 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:21:23.998 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:23:35.028 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:23:38.618 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:23:39.586 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:23:39.590 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:23:41.359 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:23:41.537 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:24:57.427 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:25:02.416 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:25:04.432 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:25:04.434 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:25:09.324 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:25:09.504 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:25:57.010 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:26:00.375 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:26:03.361 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:26:03.363 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:26:08.114 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:26:08.403 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:28:19.010 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:28:22.122 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:28:23.025 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:28:23.028 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:28:24.331 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:28:24.708 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:29:06.460 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:29:11.236 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:29:12.664 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:29:12.698 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:29:13.434 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:29:13.441 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:29:15.293 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:29:15.509 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:29:15.524 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:29:16.105 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:30:03.114 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:30:21.631 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:30:37.873 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:30:40.413 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:30:41.450 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:30:41.453 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:30:42.655 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:30:42.816 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:32:35.567 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:32:38.597 [main] StepDefinition - Text Executed0
+[INFO ] 2024-06-20 01:32:38.621 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:32:39.673 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:32:39.699 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:32:40.415 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:32:40.417 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:32:41.517 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:32:41.676 [main] StepDefinition - Text Executed0
+[INFO ] 2024-06-20 01:32:41.681 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:32:41.699 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:32:42.160 [main] StepDefinition - Text Executed0
+[INFO ] 2024-06-20 01:32:42.162 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:33:27.925 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:33:30.322 [main] StepDefinition - Text Executed0
+[INFO ] 2024-06-20 01:33:30.334 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:33:31.577 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:33:31.653 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:33:32.617 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:33:32.620 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:33:34.295 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:33:34.516 [main] StepDefinition - Text Executed0
+[INFO ] 2024-06-20 01:33:34.519 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:33:34.533 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:33:34.963 [main] StepDefinition - Text Executed0
+[INFO ] 2024-06-20 01:33:34.967 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:35:08.333 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:35:11.642 [main] StepDefinition - Text Executed: 0
+[INFO ] 2024-06-20 01:35:11.649 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:35:12.609 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:35:12.633 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:35:13.309 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:35:13.311 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:35:14.562 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:35:14.706 [main] StepDefinition - Text Executed: 0
+[INFO ] 2024-06-20 01:35:14.709 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:35:14.721 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:35:15.145 [main] StepDefinition - Text Executed: 0
+[INFO ] 2024-06-20 01:35:15.146 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:36:34.093 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:36:36.944 [main] StepDefinition - Text Executed: 0
+[INFO ] 2024-06-20 01:36:36.947 [main] StepDefinition - Updated count: 1
+[INFO ] 2024-06-20 01:36:36.956 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:36:38.017 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:36:38.073 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:36:38.716 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:36:38.720 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:36:39.967 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:36:40.164 [main] StepDefinition - Text Executed: 0
+[INFO ] 2024-06-20 01:36:40.165 [main] StepDefinition - Updated count: 1
+[INFO ] 2024-06-20 01:36:40.167 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:36:40.181 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:36:40.602 [main] StepDefinition - Text Executed: 0
+[INFO ] 2024-06-20 01:36:40.602 [main] StepDefinition - Updated count: 1
+[INFO ] 2024-06-20 01:36:40.605 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:52:05.071 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:52:08.499 [main] StepDefinition - Scenario count: 1
+[INFO ] 2024-06-20 01:52:08.536 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:52:09.877 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:52:09.907 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:52:10.681 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:52:10.684 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:52:11.843 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:52:11.962 [main] StepDefinition - Scenario count: 1
+[INFO ] 2024-06-20 01:52:11.967 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:52:11.981 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:52:12.441 [main] StepDefinition - Scenario count: 1
+[INFO ] 2024-06-20 01:52:12.444 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:54:42.909 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 01:54:45.518 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 01:54:46.545 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 01:54:46.599 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 01:54:47.241 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 01:54:47.249 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 01:54:48.880 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 01:54:49.072 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 01:54:49.086 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 01:54:49.578 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 02:35:41.723 [main] StepDefinition - Sending GET request to endpoint: /api/users?page=2
+[INFO ] 2024-06-20 02:35:44.557 [main] StepDefinition - Status code as expected : 200
+[DEBUG] 2024-06-20 02:35:45.710 [main] StepDefinition - Assertion Passed
+[INFO ] 2024-06-20 02:35:45.760 [main] StepDefinition - Sending POST request to endpoint: /api/users
+[INFO ] 2024-06-20 02:35:46.541 [main] StepDefinition - Status code as expected : 201
+[ERROR] 2024-06-20 02:35:46.543 [main] StepDefinition - Status code as expected : 188
+[INFO ] 2024-06-20 02:35:48.541 [main] StepDefinition - Sending GET request to endpoint: /api/users/2
+[INFO ] 2024-06-20 02:35:48.746 [main] StepDefinition - Status code as expected : 200
+[INFO ] 2024-06-20 02:35:48.763 [main] StepDefinition - Sending GET request to endpoint: https://mocktarget.apigee.net/xml
+[INFO ] 2024-06-20 02:35:49.209 [main] StepDefinition - Status code as expected : 200
