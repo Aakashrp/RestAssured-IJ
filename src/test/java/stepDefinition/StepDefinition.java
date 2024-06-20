@@ -2,9 +2,14 @@ package stepDefinition;
 import Pojos.APIResponse;
 import Pojos.Postapidata;
 import Pojos.User;
+
 import Utils.APIOperations;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,10 +18,16 @@ import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.junit.Assert;
+import jdk.jfr.StackTrace;
+import lombok.extern.flogger.Flogger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.Before;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -26,31 +37,46 @@ import static org.junit.Assert.assertEquals;
 public class StepDefinition {
     RequestSpecification requestSpecification = APIOperations.getRequestSpec();
     ResponseSpecification responseSpecification = APIOperations.getResponseSpec();
+
+    private static final Logger logger = LogManager.getLogger(StepDefinition.class);
+
+
+    //LogManager.getLogger(StepDefinition.class);
+
     private Response response;
     private String endpoint;
 
+    private ExtentTest test;
+    private ExtentReports extent;
+
+    public int count;
 
     @Given("the api endpoint is {string}")
     public void the_api_endpoint_is(String endpoint) {
         RestAssured.baseURI = "https://reqres.in/";
         this.endpoint = endpoint;
+
     }
+
 
     @When("I Place a {string} request")
     public void i_place_a_request(String method) {
         RequestSpecification r = given().spec(requestSpecification).log().all();
-
         if (method.equalsIgnoreCase("GET")) {
+            logger.info("Sending GET request to endpoint: {}", endpoint);
             response = r.when().get(endpoint).then().spec(responseSpecification).extract().response();
             String resp = response.asString();
             System.out.println(resp);
         } else if (method.equalsIgnoreCase("PUT")) {
+            logger.info("Sending PUT request to endpoint: {}", endpoint);
             response = r.when().put(endpoint).then().spec(responseSpecification).extract().response();
 
         } else if (method.equalsIgnoreCase("DELETE")) {
+            logger.info("Sending DELETE request to endpoint: {}", endpoint);
             response = r.when().delete(endpoint).then().spec(responseSpecification).extract().response();
 
         } else if (method.equalsIgnoreCase("POST")) {
+            logger.info("Sending POST request to endpoint: {}", endpoint);
             Postapidata data = new Postapidata("morpheus", "leader");
             RequestSpecification re = given().body(data).spec(requestSpecification).log().all();
             response = re.when().post(endpoint).then().spec(responseSpecification).extract().response();
@@ -95,8 +121,14 @@ public class StepDefinition {
 
     @Then("Status code should be {int}")
     public void status_code_should_be(int statuscode) {
-        assertEquals(statuscode, response.getStatusCode());
-        System.out.println("Statuscode as expected " + response.getStatusCode());
+       try {
+           assertEquals(statuscode, response.getStatusCode());
+           System.out.println("Statuscode as expected " + response.getStatusCode());
+           logger.info("Status code as expected : " + statuscode);
+       }catch (AssertionError e) {
+           logger.error("Status code as expected : " + statuscode);
+           throw e;
+       }
     }
 
     @Then("Validate the XML Response")
@@ -157,5 +189,6 @@ public class StepDefinition {
         File schemaFile = new File(filepath);
         //response.then().assertThat().body(matchesJsonSchemaInClasspath("FirstGet Schema.json"));    //When File is there in resource folder just pass the file name no need of full path it will not take it
         response.then().assertThat().body(matchesJsonSchema(schemaFile));
+        logger.debug("Assertion Passed");
     }
 }

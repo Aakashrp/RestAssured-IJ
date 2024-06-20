@@ -8,12 +8,17 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "E:\\My Projects\\All Projects\\API Testing\\src\\main\\resources\\features",
-        glue = "stepDefinition",
+        glue = {"stepDefinition"},
        // tags = "@Testcase or @Testtwo or @New",
-        plugin={"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports/cucumber.json"},
+        plugin={"pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                },
         tags="@TestThree",
-        stepNotifications= true
-        // dryRun = true
+        stepNotifications= true,
+        monochrome=true
+        //dryRun = true
+        //  "json:target/cucumber-reports/cucumber.json"
+        //"html:target/cucumber-reports.html"
 )
 
 public class Runner {

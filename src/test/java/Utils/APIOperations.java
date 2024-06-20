@@ -1,10 +1,8 @@
 package Utils;
-
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -17,7 +15,6 @@ public class APIOperations {
     }
 
     public static ResponseSpecification getResponseSpec() {
-
         return new ResponseSpecBuilder().build();
     }
 
@@ -31,6 +28,4 @@ public class APIOperations {
         }
         return prop.getProperty(xpath);
     }
-
-
 }

@@ -14,6 +14,7 @@ Feature: Test and validate API request
     Given the api endpoint is "/api/users"
     When I Place a "POST" request
     Then Status code should be 201
+    Then Status code should be 188
 
   @TestThree
   Scenario: Hitting a api to get xml response
@@ -29,8 +30,11 @@ Feature: Test and validate API request
     </soap:Envelope>
    """
     And I update the following fields
-    |field          | value |
-    |sCountryISOCode| INDIA |
+      | field           | value |
+      | sCountryISOCode | INDIA |
     When I Place a POST request
     Then Status code should matched
     And Read the response in console
+    Then Read value from the xml
+
+    #IF u want to hide your xml data then store it into a file and do the operation it will work fine
